@@ -1,0 +1,13 @@
+name: Run only when src/ changes
+
+on:
+  push:
+    paths:
+      - 'src/**'
+
+jobs:
+  run-on-src-change:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Zmiana została wykryta w katalogu src/"
